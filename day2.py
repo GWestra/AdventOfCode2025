@@ -74,7 +74,7 @@ def is_approximately_repetitive(n: int) -> bool:
     return False
 
 
-def solve_day_two_part_two(input: list):
+def solve_day_two_part_two(input: list) -> int:
     """Solve day 2 part 2."""
     # Loop over all product ranges and identify the allowed range of product IDs
     repetitive_numbers = []
