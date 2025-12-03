@@ -24,7 +24,7 @@ def convert_input_to_rotations(input: list) -> list:
     return result
 
 
-def solve_day_one_part_one(starting_value: int, rotations: list):
+def solve_day_one_part_one(starting_value: int, rotations: list) -> int:
     """Solve day 1 part 1."""
     # Add starting value as the initial rotation
     rotations = [starting_value] + rotations
@@ -59,7 +59,7 @@ def count_hundreds_in_between(a: int, b: int) -> int:
     return (end - start) // 100 + 1
 
 
-def solve_day_one_part_two(starting_value: int, rotations: list):
+def solve_day_one_part_two(starting_value: int, rotations: list) -> int:
     """Solve day 1 part 2."""
     # Iterate over all rotations and check after each iteration
     # 1) Whether position after the rotation is a multiple of 100
@@ -77,7 +77,6 @@ def solve_day_one_part_two(starting_value: int, rotations: list):
 
         hundred_count = count_hundreds_in_between(previous_value, value)
         result += hundred_count
-        
         i += 1
 
     return result
