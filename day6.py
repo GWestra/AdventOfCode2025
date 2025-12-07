@@ -45,9 +45,8 @@ def solve_day_six_part_two(input: list) -> int:
     operations = input[-1]
     numbers = input[:-1]
 
-    # Loop over all numbers and operations, right-to-left and keep track of the digits
-    # found in all columns and the last operator. If a new operator is identified,
-    # execute the previous operation first before resetting.
+    # Loop over all columns right-to-left and keep track of the digits in each column
+    # and the corresponding operator. If a operator is identified, execute the operation
     operator = operations[0]
     result = []
     values = []
